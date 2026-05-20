@@ -1,0 +1,14 @@
+<section class="fabout">
+		<div class="section white center">
+		      <div class="row container">
+		        <h2 class="header" style="font-weight: 500;">ABOUT US</h2>
+		        <p style="background: #81B214; color:black; border-radius:20px; padding:30px; font-weight: 500; font-size:17px;">🌿 Welcome to Veggie Village – Where Freshness Meets Flavor! 🍽️✨
+<br><br>At Veggie Village, we bring you the freshest, most delicious veggies straight from the farm to your plate.<br> Our passion is creating meals that are wholesome, flavorful, and packed with nutrients, ensuring that every bite is a celebration of nature’s best offerings. Whether you're a dedicated vegetarian, a plant-based food lover, or simply looking for a fresh and healthy meal, we’ve got something that will delight your taste buds.
+<br><br> We believe that great food starts with great ingredients. That’s why we source our vegetables from trusted local farms, ensuring that everything on your plate is fresh, organic, and free from harmful chemicals. By supporting local farmers, we’re not just serving you the best veggies—we’re also promoting sustainable and ethical farming practices that benefit the planet. 💚
+<br><br>🍽️ A Menu Full of Love and Flavor - Our dishes are crafted with care, balancing taste and nutrition in every bite. Whether you're in the mood for a crisp, refreshing salad , a hearty grain bowl , a warm and comforting soup , or a flavorful stir-fry , we’ve got something to satisfy every craving. We keep it simple yet delicious—no artificial flavors, just real, wholesome food cooked with love. ❤️
+
+<br><br>🏡 A Cozy & Welcoming Experience – More than just a restaurant, Veggie Village is a place where good food and good vibes come together. Our warm, inviting atmosphere makes every visit special—whether you’re dining solo, catching up with friends, or sharing a meal with family. The moment you step inside, you'll be greeted with the comforting aroma of fresh, home-cooked food and a friendly team ready to serve you with a smile. 😊
+
+<br><br>🌎 Sustainability & Community 🤝 – We care about the planet as much as we care about great food! That’s why we take conscious steps toward sustainability, from minimizing food waste to using eco-friendly packaging. By choosing Veggie Village, you're not just making a healthier choice for yourself but also contributing to a greener, more sustainable future. 🌱<br><br>✨ Join Us for a Veggie-Filled Adventure! 🎉 – Whether you're stopping by for a quick bite, a relaxed meal, or just to enjoy a refreshing drink 🍹, we promise an experience that will leave you feeling nourished, happy, and excited for your next visit. So come on in, grab a plate, and let’s turn every meal into a veggie-filled delight!</p>
+		      </div>
+	</section>
