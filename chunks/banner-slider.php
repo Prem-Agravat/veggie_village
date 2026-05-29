@@ -1,17 +1,14 @@
 <?php 
 require('backends/connection-pdo.php');
-$q = 'SELECT * FROM offers WHERE end_date < CURDATE() AND status != "expired"';
-$q2 = 'SELECT * FROM offers WHERE start_date = CURDATE() AND status = "Upcoming"';
-$u_query = 'UPDATE offers SET status = "expired" where end_date < CURDATE() AND status != "expired"';
-$u_query2 = 'UPDATE offers SET status = "active" where start_date = CURDATE() AND status = "Upcoming"';
-if($q>0){
-    $query1 = $pdoconn->prepare($u_query);
-    $query1->execute();
-}
-if($q2>0){
-    $query2 = $pdoconn->prepare($u_query2);
-    $query2->execute();
-}
+
+$u_query = 'UPDATE offers SET status = "expired" WHERE end_date < CURDATE() AND status != "expired"';
+$u_query2 = 'UPDATE offers SET status = "active" WHERE start_date = CURDATE() AND status = "Upcoming"';
+
+$query1 = $pdoconn->prepare($u_query);
+$query1->execute();
+
+$query2 = $pdoconn->prepare($u_query2);
+$query2->execute();
 
 
 

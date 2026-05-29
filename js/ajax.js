@@ -1,4 +1,11 @@
 $(document).ready(function(){
+	var scriptTag = document.querySelector('script[src*="js/ajax.js"]');
+	var relativeRoot = "";
+	if (scriptTag) {
+		var src = scriptTag.getAttribute('src');
+		relativeRoot = src.substring(0, src.indexOf('js/ajax.js'));
+	}
+
 	$('#submit_reg').click(function(){
 
 		var name = $('#name_reg').val()
@@ -28,7 +35,7 @@ $(document).ready(function(){
 		} else {
 
 			$.ajax({
-	            url :'/veggie_village/backends/register.php',
+	            url : relativeRoot + 'backends/register.php',
 	            type:'POST',
 	            data :{
 	            'name':name,
@@ -87,7 +94,7 @@ $(document).ready(function(){
 		} else {
 
 			$.ajax({
-	            url :'/veggie_village/backends/login.php',
+	            url : relativeRoot + 'backends/login.php',
 	            type:'POST',
 	            data :{
 	            'email':email,

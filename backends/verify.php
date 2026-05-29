@@ -24,7 +24,7 @@ if(isset($_GET['email']) && isset($_GET['v_code'])){
             if($result_fetch['is_verified'] == 0){
                 $update  = $pdoconn->prepare("UPDATE users SET is_verified = '1' WHERE email = '$result_fetch[email]'");
                 if($update->execute()){
-                    echo "<script>alert('Email Verification Successful');window.location.href='../../veggie_village';</script>";
+                    echo "<script>alert('Email Verification Successful');window.location.href='../';</script>";
 
                 }
             }else{

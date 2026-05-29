@@ -37,12 +37,14 @@ if (!isset($_REQUEST['id'])) {
     	$_SESSION['msg'] = 'Offer Deleted!';
 
 		header('location: ../../admin/offer-list.php');
+		exit();
     	
     } else {
 
     	$_SESSION['msg'] = 'There were some problem in the server! Please try again after some time!';
 
 		header('location: ../../admin/offer-list.php');
+		exit();
 
     }
 

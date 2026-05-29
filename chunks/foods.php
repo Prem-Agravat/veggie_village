@@ -62,7 +62,7 @@ $arr_all = $query->fetchAll(PDO::FETCH_ASSOC);
                             <div style="text-align: center; padding-top: 15px;">
                                 <p style="font-size: 15px; flex-grow: 1;font-weight: bold;padding-bottom:10px;">Price : ₹<?php echo $row['price']; ?></p>
                            
-                                <a href="chunks/confrim-order.php?id=<?php echo $row['id']; ?>" class="waves-effect waves-light btn order-btn" style="background: linear-gradient(45deg, #3E7B27, #81B214); border-radius: 25px; color: #E6DD3B; font-weight: bold;">
+                                <a href="confirm-order.php?id=<?php echo $row['id']; ?>" class="waves-effect waves-light btn order-btn" style="background: linear-gradient(45deg, #3E7B27, #81B214); border-radius: 25px; color: #E6DD3B; font-weight: bold;">
 									Order Now!
                                 </a>
                             </div>

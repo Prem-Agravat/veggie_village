@@ -34,15 +34,17 @@ if (!isset($_REQUEST['id'])) {
     $query  = $pdoconn->prepare($sql);
     if ($query->execute([$id])) {
 
-    	$_SESSION['msg'] = 'Category Deleted!';
+    	$_SESSION['msg'] = 'Food item Deleted!';
 
 		header('location: ../../admin/food-list.php');
+		exit();
     	
     } else {
 
     	$_SESSION['msg'] = 'There were some problem in the server! Please try again after some time!';
 
 		header('location: ../../admin/food-list.php');
+		exit();
 
     }
 

@@ -103,7 +103,7 @@ body{
     color: white;
 }
 
-#order-confrim-btn {
+#order-confrim-btn, #order-confirm-btn {
     background: #3E7B27;
     color: white;
 }
@@ -114,7 +114,7 @@ body{
     color: #ffffff;
 }
 
-#order-confrim-btn:hover {
+#order-confrim-btn:hover, #order-confirm-btn:hover {
     background: #2d5f1d;
     color: #ffffff;
 }

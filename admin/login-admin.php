@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once("../backends/connection-pdo.php");
 
 if (!isset($_POST['email']) || !isset($_POST['password'])) {
@@ -31,13 +32,11 @@ if (count($arr_login) > 0) {
 	}
 
 
-	session_start();
     $_SESSION['username']=$tmp_name;
     $_SESSION['msg']="You have successfully Logged In!";
     header('location: dashboard.php');
 
 } else {
-	session_start();
 	$_SESSION['msg']="Invalid Credentials!";
 	header('location: index.php');
 }

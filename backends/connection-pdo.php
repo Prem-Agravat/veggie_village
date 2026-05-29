@@ -8,8 +8,12 @@ try {
 }
 catch(PDOException $e)
 {
-    throw new Exception();
-    
+    // Output a helpful message instead of crashing silently
+    die("<div style='padding: 20px; background: #ffebee; border: 1px solid #ffcdd2; color: #b71c1c; font-family: sans-serif; border-radius: 5px; margin: 20px;'>
+        <strong>Database Connection Error!</strong><br>
+        Could not connect to the database. If you recently uploaded to InfinityFree, please ensure your database credentials in <code>backends/config.php</code> are updated.<br><br>
+        <strong>Technical Details:</strong> " . htmlspecialchars($e->getMessage()) . "
+    </div>");
 }
 
 

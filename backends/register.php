@@ -26,6 +26,11 @@ function sendMail($email,$v_code){
 
 	$mail = new PHPMailer(true);
 
+	$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
+	$host = $_SERVER['HTTP_HOST'];
+	$scriptPath = dirname($_SERVER['PHP_SELF']);
+	$verifyUrl = "$protocol://$host$scriptPath/verify.php?email=" . urlencode($email) . "&v_code=" . urlencode($v_code);
+
 	try {
 		$mail->isSMTP();
 		$mail->Host       = 'smtp.gmail.com';
@@ -43,7 +48,7 @@ function sendMail($email,$v_code){
 		$mail->Subject = 'Email Verification from Veggie Village';
 		$mail->Body    = "Thanks for registration!
 		Click the link to verify the email address
-		<a href='http://localhost/veggie_village/backends/verify.php?email=$email&v_code=$v_code'>Verify</a>";
+		<a href='$verifyUrl'>Verify</a>";
 
 		$mail->send();
 		return true;

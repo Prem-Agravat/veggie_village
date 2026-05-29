@@ -50,12 +50,14 @@ if (!isset($_REQUEST['id'])) {
     	$_SESSION['msg'] = 'Category Updated Succesfully!';
 
 		header('location: ../../admin/category-list.php');
+		exit();
     	
     } else {
 
     	$_SESSION['msg'] = 'There were some problem in the server! Please try again after some time!';
 
 		header('location: ../../admin/category-list.php');
+		exit();
 
     }
 
