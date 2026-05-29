@@ -20,6 +20,8 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 function sendMail($email,$v_code){
+	global $smtp_host, $smtp_user, $smtp_pass, $smtp_port;
+
 	require('PHPMailer/PHPMailer.php');
 	require('PHPMailer/SMTP.php');
 	require('PHPMailer/Exception.php');
@@ -33,14 +35,14 @@ function sendMail($email,$v_code){
 
 	try {
 		$mail->isSMTP();
-		$mail->Host       = 'smtp.gmail.com';
+		$mail->Host       = $smtp_host;
 		$mail->SMTPAuth   = true;
-		$mail->Username   = 'agravatprem00@gmail.com';
-		$mail->Password   = 'kaly hfax tmmb viqs';
+		$mail->Username   = $smtp_user;
+		$mail->Password   = $smtp_pass;
 		$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-		$mail->Port       = 587;
+		$mail->Port       = $smtp_port;
 
-		$mail->setFrom('agravatprem00@gmail.com',"Veggie Village");
+		$mail->setFrom($smtp_user,"Veggie Village");
 		$mail->addAddress($email);
 
 		//Content
